@@ -115,7 +115,7 @@ export const PhoneNumbers = () => {
     }
   }, [user]);
 
-  console.log("ADMIN_PHONENUMBER:", ADMIN_PHONENUMBER)
+  console.log("ADMIN_PHONENUMBER:", import.meta.env.VITE_ADMIN_PHONENUMBER)
   console.log("user.scope: ", user?.scope)
 
   return (
