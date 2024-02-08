@@ -52,7 +52,7 @@ export const PhoneNumbers = () => {
   const [applyMassEdit, setApplyMassEdit] = useState(false);
   const [filter, setFilter] = useState("");
   const [accountSid, setAccountSid] = useState("");
-  const ADMIN_PHONENUMBER = import.meta.env.VITE_ADMIN_PHONENUMBER;
+  const ADMIN_PHONENUMBER = import.meta.env.VITE_ADMIN_PHONENUMBER?;
 
   const phoneNumbersFiltered = useMemo(() => {
     setAccountSid(getAccountFilter());
