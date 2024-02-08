@@ -338,7 +338,7 @@ export const PhoneNumbers = () => {
           )}
         </div>
       </Section>
-      {((ADMIN_PHONENUMBER === '1' && user.scope === USER_ADMIN) || !ADMIN_PHONENUMBER) && (
+      {((ADMIN_PHONENUMBER === '1' && user?.scope === USER_ADMIN) || !ADMIN_PHONENUMBER) && (
           <Section clean>
             {hasLength(accounts) && hasLength(carriers) && (
               <Button small as={Link} to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`}>
