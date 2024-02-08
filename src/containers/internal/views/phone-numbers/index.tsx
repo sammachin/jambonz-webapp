@@ -115,6 +115,9 @@ export const PhoneNumbers = () => {
     }
   }, [user]);
 
+  console.log("ADMIN_PHONENUMBER:", ADMIN_PHONENUMBER)
+  console.log("user.scope: ", user?.scope)
+
   return (
     <>
       <section className="mast">
