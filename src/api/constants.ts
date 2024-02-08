@@ -83,8 +83,8 @@ export const BASE_URL: string =
 export const GOOGLE_CLIENT_ID: string =
   window.JAMBONZ?.GOOGLE_CLIENT_ID || import.meta.env.VITE_APP_GOOGLE_CLIENT_ID;
 
-export const ADMIN_PHONENUMBER: string =
-  import.meta.env.VITE_ADMIN_PHONENUMBER || "0";
+export const ADMIN_PHONENUMBER: boolean =
+  import.meta.env.VITE_ADMIN_PHONENUMBER || "false";
 
 export const STRIPE_PUBLISHABLE_KEY: string =
   window.JAMBONZ?.STRIPE_PUBLISHABLE_KEY ||
