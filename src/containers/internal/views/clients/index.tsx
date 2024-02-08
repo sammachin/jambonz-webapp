@@ -210,11 +210,7 @@ export const Clients = () => {
           )}
         </div>
       </Section>
-      <Section clean>
-        <Button small as={Link} to={`${ROUTE_INTERNAL_CLIENTS}/add`}>
-          Add sip client
-        </Button>
-      </Section>
+
       {client && (
         <ClientsDelete
           client={client}
