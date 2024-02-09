@@ -122,14 +122,12 @@ export const PhoneNumbers = () => {
     <>
       <section className="mast">
         <H1 className="h2">Phone numbers</H1>
-        {((ADMIN_PHONENUMBER === "1" && user?.scope === USER_ADMIN) || ADMIN_PHONENUMBER === "0") && (
-          {hasLength(accounts) && hasLength(carriers) && (
+        {(hasLength(accounts) && hasLength(carriers)) && ((ADMIN_PHONENUMBER === "1" && user?.scope === USER_ADMIN) || ADMIN_PHONENUMBER === "0") && (
             <Link to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`} title="Add a phone number">
               <Icon>
                 <Icons.Plus />
               </Icon>
             </Link>
-          )}
         )}
       </section>
       <section className="filters filters--multi">
