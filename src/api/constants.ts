@@ -85,7 +85,7 @@ export const GOOGLE_CLIENT_ID: string =
 
 console.log("ENV_VAR:", import.meta.env.VITE_ADMIN_PHONENUMBER)
 export const ADMIN_PHONENUMBER: string =
-  import.meta.env.VITE_ADMIN_PHONENUMBER || "1";
+  import.meta.env.VITE_ADMIN_PHONENUMBER || "0";
 
 export const STRIPE_PUBLISHABLE_KEY: string =
   window.JAMBONZ?.STRIPE_PUBLISHABLE_KEY ||
