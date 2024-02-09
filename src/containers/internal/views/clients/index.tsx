@@ -16,7 +16,7 @@ import { toastError, toastSuccess, useSelectState } from "src/store";
 import { Scope } from "src/store/types";
 import { hasLength, hasValue, useFilteredResults } from "src/utils";
 import ClientsDelete from "./delete";
-import { USER_ACCOUNT } from "src/api/constants";
+import { USER_ACCOUNT, USER_ADMIN, ADMIN_CLIENT} from "src/api/constants";
 
 export const Clients = () => {
   const user = useSelectState("user");
