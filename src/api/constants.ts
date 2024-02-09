@@ -87,6 +87,12 @@ export const GOOGLE_CLIENT_ID: string =
 export const ADMIN_PHONENUMBER: string =
   window.JAMBONZ?.ADMIN_PHONENUMBER || import.meta.env.VITE_ADMIN_PHONENUMBER || "0";
 
+export const ADMIN_CARRIER: string =
+window.JAMBONZ?.ADMIN_CARRIER || import.meta.env.VITE_ADMIN_CARRIER || "0";
+
+export const ADMIN_CLIENT: string =
+window.JAMBONZ?.ADMIN_CLIENT || import.meta.env.VITE_ADMIN_CLIENT || "0";
+
 export const STRIPE_PUBLISHABLE_KEY: string =
   window.JAMBONZ?.STRIPE_PUBLISHABLE_KEY ||
   import.meta.env.VITE_APP_STRIPE_PUBLISHABLE_KEY;

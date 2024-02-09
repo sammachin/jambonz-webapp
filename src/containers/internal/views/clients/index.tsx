@@ -102,10 +102,12 @@ export const Clients = () => {
                 <M>
                   Your sip realm is <span>{selectedAccount.sip_realm}</span>
                 </M>
+                {((ADMIN_CLIENT === "1" && user?.scope === USER_ADMIN) || ADMIN_CLIENT === "0") && (
                 <M>
                   You can add sip credentials below to allow sip devices to
                   register to this realm and make calls.
                 </M>
+                )}
               </>
             ) : (
               <M>
@@ -117,13 +119,14 @@ export const Clients = () => {
             <></>
           )}
         </div>
-
+        {((ADMIN_CLIENT === "1" && user?.scope === USER_ADMIN) || ADMIN_CLIENT === "0") && (
         <Link to={`${ROUTE_INTERNAL_CLIENTS}/add`} title="Add sip client">
           {" "}
           <Icon>
             <Icons.Plus />
           </Icon>
         </Link>
+        )}
       </section>
 
       <section className="filters filters--multi">
