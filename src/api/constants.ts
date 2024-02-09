@@ -26,7 +26,9 @@ interface JambonzWindowObject {
   BASE_URL: string;
   DEFAULT_SERVICE_PROVIDER_SID: string;
   STRIPE_PUBLISHABLE_KEY: string;
-  ADMIN_PHONENUMBER: string
+  ADMIN_PHONENUMBER: string;
+  ADMIN_CLIENT: string;
+  ADMIN_CARRIER: string;
 }
 
 declare global {
