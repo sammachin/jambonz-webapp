@@ -124,14 +124,11 @@ export const PhoneNumbers = () => {
         <H1 className="h2">Phone numbers</H1>
         {((ADMIN_PHONENUMBER === "1" && user?.scope === USER_ADMIN) || ADMIN_PHONENUMBER === "0") && (
           {hasLength(accounts) && hasLength(carriers) && (
-          <Link
-            to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`}
-            title="Add a phone number"
-          >
-            <Icon>
-              <Icons.Plus />
-            </Icon>
-          </Link>
+            <Link to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`} title="Add a phone number">
+              <Icon>
+                <Icons.Plus />
+              </Icon>
+            </Link>
           )}
         )}
       </section>
