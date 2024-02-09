@@ -115,7 +115,7 @@ export const PhoneNumbers = () => {
     }
   }, [user]);
 
-  console.log("ADMIN_PHONENUMBER:", import.meta.env.VITE_ADMIN_PHONENUMBER)
+  console.log("ADMIN_PHONENUMBER:", ADMIN_PHONENUMBER)
   console.log("user.scope: ", user?.scope)
 
   return (
@@ -341,7 +341,7 @@ export const PhoneNumbers = () => {
           )}
         </div>
       </Section>
-      {((ADMIN_PHONENUMBER === '1' && user?.scope === USER_ADMIN) || !ADMIN_PHONENUMBER) && (
+      {((ADMIN_PHONENUMBER && user?.scope === USER_ADMIN) || !ADMIN_PHONENUMBER) && (
           <Section clean>
             {hasLength(accounts) && hasLength(carriers) && (
               <Button small as={Link} to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`}>
