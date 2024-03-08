@@ -119,7 +119,7 @@ export const Clients = () => {
             <></>
           )}
         </div>
-        {((ADMIN_CLIENT === "1" && user?.scope === USER_ADMIN) || ADMIN_CLIENT === "0") && (
+        {((ADMIN_CLIENT === "1" && user?.scope === USER_SP) || ADMIN_CLIENT === "0") && (
         <Link to={`${ROUTE_INTERNAL_CLIENTS}/add`} title="Add sip client">
           {" "}
           <Icon>
