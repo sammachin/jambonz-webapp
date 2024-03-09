@@ -34,6 +34,7 @@ import {
   ENABLE_HOSTED_SYSTEM,
   USER_ACCOUNT,
   USER_ADMIN,
+  USER_SP,
 } from "src/api/constants";
 import { DeleteCarrier } from "./delete";
 
