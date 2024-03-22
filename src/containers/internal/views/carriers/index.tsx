@@ -150,7 +150,7 @@ export const Carriers = () => {
             </M>
           )}
         </div>
-        {((ADMIN_CARRIER === "1" && user?.scope === USER_SP) || ADMIN_CARRIER === "0") && (
+        {((ADMIN_CARRIER === "1" && (user?.scope === USER_ADMIN || user?.scope===USER_SP)) || ADMIN_CARRIER === "0") && (
         <Link to={`${ROUTE_INTERNAL_CARRIERS}/add`} title="Add a Carrier">
           {" "}
           <Icon>
