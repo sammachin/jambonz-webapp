@@ -30,11 +30,15 @@ import {
 import { DeletePhoneNumber } from "./delete";
 
 import type { Account, PhoneNumber, Carrier, Application } from "src/api/types";
-import { USER_ACCOUNT, USER_ADMIN, ADMIN_PHONENUMBER, USER_SP } from "src/api/constants";
+import {
+  USER_ACCOUNT,
+  USER_ADMIN,
+  ADMIN_PHONENUMBER,
+  USER_SP,
+} from "src/api/constants";
 import { ScopedAccess } from "src/components/scoped-access";
 import { Scope } from "src/store/types";
 import { getAccountFilter, setLocation } from "src/store/localStore";
-
 
 export const PhoneNumbers = () => {
   const user = useSelectState("user");
@@ -119,13 +123,20 @@ export const PhoneNumbers = () => {
     <>
       <section className="mast">
         <H1 className="h2">Phone numbers</H1>
-        {(hasLength(accounts) && hasLength(carriers)) && ((ADMIN_PHONENUMBER === "1" && (user?.scope === USER_ADMIN || user?.scope===USER_SP) || ADMIN_PHONENUMBER === "0") && (
-            <Link to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`} title="Add a phone number">
+        {hasLength(accounts) &&
+          hasLength(carriers) &&
+          ((ADMIN_PHONENUMBER === "1" &&
+            (user?.scope === USER_ADMIN || user?.scope === USER_SP)) ||
+            ADMIN_PHONENUMBER === "0") && (
+            <Link
+              to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`}
+              title="Add a phone number"
+            >
               <Icon>
                 <Icons.Plus />
               </Icon>
             </Link>
-        )}
+          )}
       </section>
       <section className="filters filters--multi">
         <SearchFilter
@@ -335,14 +346,15 @@ export const PhoneNumbers = () => {
           )}
         </div>
       </Section>
-      {((ADMIN_PHONENUMBER === "1" && user?.scope === USER_SP) || ADMIN_PHONENUMBER === "0") && (
-          <Section clean>
-            {hasLength(accounts) && hasLength(carriers) && (
-              <Button small as={Link} to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`}>
-                Add phone number
-              </Button>
-            )}
-          </Section>
+      {((ADMIN_PHONENUMBER === "1" && user?.scope === USER_SP) ||
+        ADMIN_PHONENUMBER === "0") && (
+        <Section clean>
+          {hasLength(accounts) && hasLength(carriers) && (
+            <Button small as={Link} to={`${ROUTE_INTERNAL_PHONE_NUMBERS}/add`}>
+              Add phone number
+            </Button>
+          )}
+        </Section>
       )}
       {phoneNumber && (
         <DeletePhoneNumber
