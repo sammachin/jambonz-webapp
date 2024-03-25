@@ -346,7 +346,8 @@ export const PhoneNumbers = () => {
           )}
         </div>
       </Section>
-      {((ADMIN_PHONENUMBER === "1" && user?.scope === USER_SP) ||
+      {((ADMIN_PHONENUMBER === "1" &&
+        (user?.scope === USER_ADMIN || user?.scope === USER_SP)) ||
         ADMIN_PHONENUMBER === "0") && (
         <Section clean>
           {hasLength(accounts) && hasLength(carriers) && (
